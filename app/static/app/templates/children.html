@@ -1,0 +1,23 @@
+<div class="container-fluid" id="children">
+    <ul>
+        <li class="child_item" ng-repeat="child in children" ng-click="to_score(child.child_id, child.icon_home)">
+            <a class="head_img" style="background-image:url('http://api.keji110.com{{child.icon_home}}')"></a>
+            <a class="name">{{child.name_home}}</a>
+            <!--<a class="school">北师大附中一小  一年级</a>-->
+            <!--<a class="parent">邓某某</a>-->
+            <a class="close" ng-click="del(child.child_id, $event)"></a>
+        </li>
+        <li class="child_item">
+            <a class="plus" href="/#/add_child">+</a>
+            <a class="plus_desc" href="/#/add_child">添加孩子</a>
+        </li>
+    </ul>
+
+</div>
+<script type="text/ng-template" id="if_delete">
+    <div class="alert_content">
+        <p class="delete" ng-click="closeThisDialog(1)">删除</p>
+        <p class="cancel" ng-click="closeThisDialog(0)">取消</p>
+    </div>
+</script>
+<div ng-include="alert_url"></div>

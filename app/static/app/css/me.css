@@ -1,0 +1,706 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  font-family: STHeitiSC-Light, monospace;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.container-fluid {
+  padding-bottom: 60px;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+p,
+h1,
+h2,
+h4,
+h5 {
+  padding: 0px;
+  margin: 0px;
+}
+ul {
+  list-style: none;
+}
+input::-webkit-input-placeholder {
+  color: #50e3c2;
+}
+input {
+  outline: none;
+}
+p,
+h5,
+h4,
+a {
+  color: #979797;
+}
+.enable {
+  background: #1d9489 !important;
+}
+.alert_gg {
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+.alert_gg .logo {
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 34px;
+}
+.alert_gg .title {
+  position: absolute;
+  display: block;
+  left: 48px;
+  color: yellow;
+  font-size: 14px;
+}
+.alert_gg .desc {
+  position: absolute;
+  top: 30px;
+  left: 48px;
+  font-size: 10px;
+  color: #fff;
+}
+.alert_gg .close img {
+  position: absolute;
+  width: 10px;
+  right: 10px;
+  top: 10px;
+}
+.alert_gg .download {
+  position: absolute;
+  color: #fff;
+  font-size: 10px;
+  right: 26px;
+  top: 14px;
+  background: #29b4f3;
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  line-height: 16px;
+}
+#add {
+  text-align: center;
+  padding-top: 130px;
+}
+#add .tip1 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#add .tip2 {
+  font-size: 24px;
+}
+#add .tip3 {
+  font-size: 18px;
+}
+#add #icon_btn {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  background: #333;
+  background-size: 100%;
+  border-radius: 50%;
+  margin: 30px;
+}
+#add form {
+  padding: 40px;
+}
+#add form input {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #ccc;
+  padding: 13px 0px;
+  margin-bottom: 18px;
+}
+#add form .submit {
+  background: #dddddd;
+  border-radius: 7px;
+  color: #FFF;
+  font-weight: 900;
+  margin-top: 30px;
+}
+#add .avatar_picker .ngdialog-content {
+  position: fixed;
+  width: 100%;
+  height: 60%;
+  bottom: 0px;
+}
+#add .avatar_picker .ngdialog-content li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  padding: 30px 0px;
+}
+#add .avatar_picker .ngdialog-content li img {
+  width: 75px;
+  height: 75px;
+}
+#add .ngdialog-close {
+  display: none;
+}
+#select {
+  position: relative;
+  background-color: #ededed;
+  padding: 0px;
+  margin: 0px;
+}
+#select .tip-x {
+  text-align: center;
+  padding: 30px;
+}
+#select .tip-x .back {
+  padding: 10px 20px;
+  display: inline-block;
+  background: #1d9489;
+  color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+}
+#select > header {
+  background: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  border-bottom: solid 3px #ededed;
+}
+#select > header span {
+  font-size: 18px;
+  color: #66959a;
+}
+#select .children_grid {
+  background: #fff;
+}
+#select .children_grid li {
+  display: inline-table;
+  width: 33%;
+  height: 139px;
+  top: 0;
+  position: relative;
+  text-align: center;
+  padding-top: 15px;
+}
+#select .children_grid li img {
+  height: 80px;
+}
+#edit {
+  text-align: center;
+  padding-top: 100px;
+}
+#edit .tip1 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#edit .tip2 {
+  font-size: 24px;
+}
+#edit .tip3 {
+  font-size: 18px;
+}
+#edit #icon_btn {
+  display: inline-block;
+  width: 90px;
+  height: 125px;
+  background: #fff;
+  background-size: 100%;
+  margin: 30px;
+}
+#edit form {
+  padding: 40px;
+}
+#edit form input {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #ccc;
+  padding: 13px 0px;
+  margin-bottom: 18px;
+}
+#edit form .family_role {
+  color: #444;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: solid 1px #ccc;
+  padding: 13px 0;
+  margin-bottom: 18px;
+  text-align: left;
+}
+#edit form .submit {
+  background: #dddddd;
+  border-radius: 7px;
+  color: #FFF;
+  font-weight: 900;
+  margin-top: 30px;
+}
+#edit .relation_picker .ngdialog-content {
+  position: fixed;
+  width: 100%;
+  height: 468px;
+  bottom: 0px;
+  padding: 20px;
+}
+#edit .relation_picker .ngdialog-content li {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0px;
+}
+#edit .avatar_picker .ngdialog-content {
+  position: fixed;
+  width: 100%;
+  height: 60%;
+  bottom: 0px;
+  overflow: scroll;
+}
+#edit .avatar_picker .ngdialog-content li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  padding: 30px 0px;
+}
+#edit .avatar_picker .ngdialog-content li img {
+  width: auto;
+  height: 75px;
+}
+#edit .ngdialog-close {
+  display: none;
+}
+#children {
+  padding: 0px;
+}
+#children ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+#children .child_item {
+  position: relative;
+  height: 100px;
+  padding: 20px 15px;
+  border-bottom: solid 0.75px #ddd;
+}
+#children .child_item .head_img {
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  height: 60px;
+  width: 60px;
+  background-size: 100%;
+  border-radius: 50%;
+}
+#children .child_item .name {
+  position: absolute;
+  left: 90px;
+  top: 20px;
+  font-size: 18px;
+  color: #000;
+}
+#children .child_item .school {
+  position: absolute;
+  left: 90px;
+  top: 50px;
+  font-size: 12px;
+  color: #4a4a4a;
+}
+#children .child_item .parent {
+  position: absolute;
+  left: 90px;
+  top: 68px;
+  font-size: 12px;
+  color: #4a4a4a;
+}
+#children .child_item .plus {
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #7cd0f6;
+  border: solid 1px #7cd0f6;
+  text-align: center;
+  line-height: 60px;
+}
+#children .child_item .plus_desc {
+  position: absolute;
+  left: 90px;
+  top: 33px;
+  font-size: 24px;
+  color: #7cd0f6;
+}
+#children .child_item .close {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('/static/app/img/close@2x.png');
+  background-size: 100%;
+}
+#children .delete {
+  text-align: center;
+  padding: 10px;
+  background: #c13838;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#children .cancel {
+  text-align: center;
+  padding: 10px;
+  background: #777;
+  color: #fff;
+  margin-bottom: 10px;
+}
+#children .ngdialog-content {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  padding: 20px;
+}
+#children .ngdialog-close {
+  display: none;
+}
+#score {
+  padding: 0px;
+  background: #f8f8f8;
+}
+#score .tab {
+  padding: 18px 0px;
+  background: #fff;
+  margin-bottom: 30px;
+}
+#score .tab img {
+  width: 25px;
+  height: 25px;
+}
+#score .tab a {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  font-size: 14px;
+}
+#score .tab .left {
+  border-right: solid 1px #ddd;
+}
+#score .tip {
+  text-align: center;
+}
+#score .pic {
+  text-align: center;
+  padding: 20px;
+  height: 170px;
+}
+#score .circle1 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-image: url('/static/app/img/oval237Copy@2x.png');
+  background-size: 100%;
+  display: inline-block;
+}
+#score .circle2 {
+  position: absolute;
+  top: 0px;
+  width: 100px;
+  height: 100px;
+  top: 25px;
+  left: 25px;
+  background: #fff;
+  border-radius: 50%;
+}
+#score .commit {
+  padding: 20px;
+}
+#score .commit .score_item {
+  position: relative;
+  height: 80px;
+  margin-top: 10px;
+}
+#score .commit .time {
+  font-size: 18px;
+}
+#score .commit .action {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-size: 100%;
+}
+#score .commit .action .num {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -10px;
+  right: -15px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+}
+#score .commit .action .good {
+  background: #a6d25d;
+}
+#score .commit .action .bad {
+  background: #d45151;
+  color: #fff;
+}
+#score .commit .title {
+  position: absolute;
+  top: 0px;
+  left: 70px;
+  font-size: 15px;
+  color: #4a4a4a;
+}
+#score .commit .desc {
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  font-size: 15px;
+  color: #4a4a4a;
+}
+#score .commit .teacher {
+  position: absolute;
+  bottom: 10px;
+  left: 70px;
+  font-size: 10px;
+}
+#score .ngdialog-content {
+  position: fixed;
+  top: 30%;
+  left: 5%;
+  width: 90%;
+  background: #fff;
+}
+#score .ngdialog-content .board {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  /* margin: 20px; */
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+#score .ngdialog-content .board li {
+  padding: 8px;
+  border-top: solid 1px #ddd;
+  background: #e8e8e8;
+}
+#score .ngdialog-content .board li:nth-child(1) {
+  border-top: none;
+}
+#score .ngdialog-close {
+  display: none;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+#class {
+  position: relative;
+  background-color: #ededed;
+  padding: 0px;
+  margin: 0px;
+}
+#class > header {
+  background: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  border-bottom: solid 3px #ededed;
+}
+#class > header span {
+  font-size: 18px;
+  color: #66959a;
+}
+#class > header .bbg {
+  background-image: url('../img/schedule@2x.png');
+  width: 18px;
+  height: 18px;
+  background-size: 100%;
+  display: inline-block;
+  margin-bottom: -2px;
+}
+#class > header .icon-angle-right {
+  float: right;
+}
+.status_item {
+  position: relative;
+  background: #fff;
+}
+.status_item .header_img {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ddd;
+  background-image: url('/static/app/img/demo/01.png');
+  background-color: white;
+  background-size: 100%;
+}
+.status_item > div {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  left: 60px;
+  padding: 10px;
+  /* article */
+}
+.status_item > div > header {
+  margin-bottom: 10px;
+}
+.status_item > div > header .title {
+  font-size: 19px;
+  color: #333333;
+}
+.status_item > div > header .publish_time {
+  float: right;
+  font-size: 14px;
+  color: #979797;
+}
+.status_item > div > article .text_content {
+  font-size: 14px;
+  color: #6d6d6d;
+  margin-bottom: 10px;
+}
+.status_item > div > article .images {
+  width: 100%;
+  margin-top: 20px;
+}
+.status_item > div > article .images li {
+  display: inline-block;
+  width: 32%;
+  margin: 2px;
+  background-size: 100%;
+}
+.status_item > div > article img {
+  width: 80px;
+  height: 80px;
+}
+.status_item > div > footer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #cbcbcb;
+  min-height: 40px;
+}
+.status_item > div > footer .heart {
+  float: right;
+}
+.status_item > div > footer .yes {
+  color: rgba(94, 138, 255, 0.7);
+}
+.status_item > div > footer i {
+  font-size: 18px;
+}
+#photos {
+  position: relative;
+  width: 100%;
+}
+#photos .content {
+  padding: 10px 0;
+}
+#photos li {
+  width: 100%;
+  padding-bottom: 8px;
+}
+#photos li img {
+  width: 100%;
+}
+.photos {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.photos #curr {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 100;
+}
+.photos img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.photos .icon-spin5 {
+  position: absolute;
+  top: 47%;
+  left: 48%;
+  z-index: -1;
+  background: #000;
+}
+.photos i {
+  color: #fff;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: rgba(200, 200, 200, 0.5);
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30px;
+  z-index: 10;
+}
+.photos .close {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  font-size: 21px;
+  font-weight: 700;
+  opacity: 1;
+  z-index: 1111;
+}
+.photos .close i {
+  background: rgba(20, 20, 20, 0.5);
+}
+.photos .prev,
+.photos .next {
+  position: fixed;
+  top: 47%;
+  z-index: 1111;
+  width: 20px;
+  height: 20px;
+}
+.photos .prev {
+  left: 20px;
+}
+.photos .next {
+  right: 30px;
+}

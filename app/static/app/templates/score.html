@@ -1,0 +1,81 @@
+<div class="container-fluid" id="score">
+    <p class="tab">
+        <a class="left" ng-click="sbv()">
+            <img src="/static/app/img/schedule@2x.png">
+            <span>{{cur_subject}}</span>
+            <i class="demo-icon icon-angle-down"></i>
+        </a>
+        <a class="left" ng-click="dl()">
+            <img src="/static/app/img/shape@2x.png">
+            <span>{{cur_dl}}</span>
+            <!--<i class="demo-icon icon-down-open"></i>-->
+            <i class="demo-icon icon-angle-down"></i>
+        </a>
+    </p>
+    <p class="tip">
+        <span class="">积极行为点数：{{positive_num}}</span>&nbsp;
+        <span class="">需要改进行为点数：{{negative_num}}</span>
+    </p>
+    <section class="pic" id="score_chart">
+        <div class="circle1">
+            <canvas id="score_canvas" class="procanvas" value="100%"></canvas>
+            <img class="circle2" src="http://api.keji110.com/{{ logo_url }}">
+        </div>
+    </section>
+    <section class="commit">
+    <!--<p class="time">2016年1月1日</p>-->
+    <ul>
+        <li class="score_item" ng-repeat="commit in f_commits">
+            <div ng-if="commit.class_report_type != '4' && commit.type == '1000'">
+                <a class="action" style="background-image: url('http://api.keji110.com/{{commit.class_behavior_icon}}')">
+                <span class="num" ng-class="{1: 'good', 2: 'bad'}[commit.bType]">{{commit.score}}</span>
+                </a>
+                <p class="title">因为{{commit.class_behavior_name}}</p>
+                <p class="desc">{{commit.student_name}}获得{{commit.score}}{{action_type[commit.bType]}}</p>
+                <p class="teacher">
+                    {{moment_show(commit.create_at)}} 由{{commit.class_subject_name}}老师 {{commit.teacher_ame}}纪录
+
+                </p>
+            </div>
+            <div ng-if="commit.class_report_type != '4' && commit.type == '2000'">
+                <a class="action" style="background-image: url('http://api.keji110.com/{{commit.student_icon}}')">
+                </a>
+                <p class="title">{{b_types[commit.bType]}}</p>
+                <p class="desc">{{commit.student_name}}</p>
+                <p class="teacher">
+                    {{moment_show(commit.create_at)}} 由{{commit.class_subject_name}}老师 {{commit.teacher_ame}}纪录
+
+                </p>
+            </div>
+            <div ng-if="commit.class_report_type == '4'">
+                <a class="action" style="background-image: url('http://api.keji110.com{{commit.student_icon}}')">
+                </a>
+                <p class="title">{{commit.teacher_ame}}的评论</p>
+                <p class="desc">{{commit.student_name}}</p>
+                <p class="teacher">
+                    {{moment_show(commit.create_at)}} 由{{commit.class_subject_name}}老师 {{commit.teacher_ame}}纪录
+
+                </p>
+            </div>
+        </li>
+    </ul>
+    </section>
+</div>
+<script type="text/ng-template" id="date_limit">
+    <div class="board">
+        <ul>
+            <li ng-click="closeThisDialog(1)">今天</li>
+            <li ng-click="closeThisDialog(2)">本周</li>
+            <li ng-click="closeThisDialog(3)">上周</li>
+            <li ng-click="closeThisDialog(4)">本月</li>
+            <li ng-click="closeThisDialog(5)">上月</li>
+        </ul>
+    </div>
+</script>
+<script type="text/ng-template" id="subjectsmm">
+    <div class="board">
+        <ul>
+            <li ng-repeat="subject in subjects" ng-click="closeThisDialog(subject)">{{subject}}</li>
+        </ul>
+    </div>
+</script>

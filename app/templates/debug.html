@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>DEBUG</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/fontello/css/fontello.css') }}">
+    <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='app/less/style.less') }}">
+    <!-- 对话框 -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/node_modules/ng-dialog/css/ngDialog.min.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/jquery/dist/jquery.min.js') }}"></script>
+
+    <!-- less 样式解析 测试环境 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/less/dist/less.min.js') }}"></script>
+    <!-- 上传图片需要 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/jquery/dist/jquery.min.js') }}"></script>
+{#    <script type="text/javascript" src="{{ url_for('static', filename='app/lib/bespoke.js') }}"></script>#}
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='app/controllers/galleria-1.4.2.min.js') }}"></script>-->
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='app/controllers/themes/classic/galleria.classic.min.js') }}"></script>-->
+    <!-- angularJs -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/angular/angular.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/angular-route/angular-route.js') }}"></script>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/ng-dialog/js/ngDialog.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/moment/moment.js') }}"></script>
+
+    <!-- 应用代码 -->
+    <script type="text/javascript" src="{{ url_for('static', filename='app/controllers/user.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app/route.js') }}"></script>
+
+    <!-- 腾讯地图 -->
+    <!--<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=HLSBZ-ZPZHF-XPNJG-J4Q46-IW4KS-3KFVM&libraries=drawing"></script>-->
+    <!-- 百度地图 -->
+    <!--<script src="http://api.map.baidu.com/api?v=2.0&ak=MgAVEr6ayBzs3rGNfWI80zHv" type="text/javascript"></script>-->
+</head>
+
+<body ng-view>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<div class="container-fluid" id="photos">
+    <!--<a class="close" ng-click="close()"><i class="icon-cancel"></i></a>-->
+    <!--<a class="prev" ng-click="prev()"><i class="icon-left-open"></i></a>-->
+    <!--<a class="next" ng-click="next()"><i class="icon-right-open"></i></a>-->
+
+    <!--<div id="curr">-->
+        <!--<img id="img" src="http://qn.keji110.com/{{curr_photo}}">-->
+        <!--<i class="icon-spin5"></i>-->
+    <!--</div>-->
+    <p class="content">{{post.content}}</p>
+    <ul class="photos-container">
+        <li ng-repeat="img in photos">
+            <img  src="http://qn.keji110.com/{{img}}">
+        </li>
+    </ul>
+</div>
+
+<div ng-include="alert_url"></div>

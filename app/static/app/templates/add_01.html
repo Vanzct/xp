@@ -1,0 +1,21 @@
+<div class="container-fluid" id="add">
+    <div ng-include="alert_url"></div>
+    <!--<p><a id="icon_btn" ng-click="avatar_picker_show()" style="background-image:url('{{child.icon_home}}')"></a></p>-->
+    <form>
+        <!--<input name="name_home" type="text" placeholder="输入称呼" ng-change="input_change()" ng-model="child.name_home">-->
+        <input name="code" type="text" placeholder="孩子代码" ng-change="input_change()" ng-model="code">
+
+        <input class="submit {{submit_status}}" type="submit" value="添加您的孩子" ng-click="add()">
+        <p class="tip3">孩子代码可从老师处得到</p>
+        <p class="tip4" style="color: red;margin-top: 30px;">{{tip}}</p>
+    </form>
+</div>
+<script type="text/ng-template" id="avatar">
+    <div class="avatar_bord">
+        <ul>
+            <li ng-repeat="avatar in avatars">
+                <img src="http://api.keji110.com{{avatar}}" ng-click="closeThisDialog(avatar)">
+            </li>
+        </ul>
+    </div>
+</script>

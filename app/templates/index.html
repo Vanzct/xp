@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>校朋</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/fontello/css/fontello.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/css/animation.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app/dist/xiaopeng.min.1.0.23.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='app/node_modules/jquery/dist/jquery.min.js') }}"></script>
+    <script  src="{{ url_for('static', filename='app/dist/xiaopeng.min.1.0.23.js') }}"></script>
+
+    <!-- 微信SDK -->
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+
+<body ng-view>
+
+</body>
+</html>

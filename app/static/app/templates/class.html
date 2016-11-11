@@ -1,0 +1,42 @@
+<div class="container-fluid" id="class">
+    <div ng-include="alert_url"></div>
+    <header class="to_homework" ng-click="to_homework()">
+        <i class="bbg"></i>
+        <span>作业薄</span>
+        <a href><i class="icon-angle-right"></i></a>
+    </header>
+    <div class="flow">
+        <ul>
+            <li class="status_item" ng-repeat="post in posts">
+                <a class="header_img" style="background-image:url('http://api.keji110.com/{{post.classeSubject.icon}}')"></a>
+                <div style="width: {{width}}px;">
+                    <header>
+                        <a class="title">{{post.sysUser.username}}</a>
+                        <a class="publish_time">{{moment_show(post.create_at)}}</a>
+                    </header>
+                    <article>
+                        <p class="text_content">{{post.content}}</p>
+                        <ul class="images">
+                            <li ng-repeat="img in imgs(post.images)" ng-click="photo_show(post, img)"
+                                    style="width: {{imagesStyle(imgs(post.images)).width}};
+                                     height:{{imagesStyle(imgs(post.images)).height}};
+                                     background-image: url(http://qn.keji110.com/{{img}}?imageView2/1/w/256/h/256/q/75)">
+                            </li>
+                        </ul>
+
+                    </article>
+                    <footer>
+                        <span class="subject">{{post.classes.name}}{{post.classeSubject.name}}</span>
+                        <a class="heart {{post.isLike}}">
+                            <span class="heart_count">{{post.like_num}}个人觉得很赞</span>
+                            <i class="icon-heart" ng-show="isLike(post.isLike)" ng-click="unlike(post)"></i>
+                            <i class="icon-heart-empty" ng-hide="isLike(post.isLike)" ng-click="like(post)"></i>
+                        </a>
+                    </footer>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div ng-include="alert_url"></div>
